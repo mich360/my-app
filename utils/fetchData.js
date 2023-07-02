@@ -1,4 +1,4 @@
-// utils/fetchData.js
+// utils/fetchData.jsta
 
 export async function fetchData() {
     try {
