@@ -1,21 +1,8 @@
-// import React from 'react';
-
-
-// const AboutPage = () => {
-//   return (
-//     <div>
-//       <h1>About Page</h1>
-//       <p>This is the about page.</p>
-//     </div>
-//   );
-// };
-
-// export default AboutPage;
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-// import styles from '../styles/index.module.css';
-// import MyComponent from './MyComponent';
+import { MyComponent } from '../components/MyComponent';
+import { fetchData } from '../utils/fetchData';
 
 const AboutPage = () => {
   return (
