@@ -14,12 +14,23 @@ export default function Page({ data }) {
   );
 }
 
-export async function getServerSideProps() {
-  const data = await fetchData();
-
-  return {
-    props: {
-      data,
-    },
-  };
+export default function Page() {
+  return (
+    <div>
+      {/* ページの内容 */}
+    </div>
+  );
 }
+
+// 修正前
+// export async function getServerSideProps() {
+//   // サーバーコンポーネント内で使用されているコンポーネントのデータ取得などの処理
+//   const data = await fetchData();
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }
+
+
