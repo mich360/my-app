@@ -2,7 +2,7 @@
 
 export async function fetchData() {
     try {
-      const response = await fetch('https://api.example.com/data');
+      const response = await fetch('https://canape2020.stars.ne.jp//data');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
