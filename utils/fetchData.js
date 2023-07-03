@@ -1,19 +1,39 @@
 // utils/fetchData.jsta
-
 export async function fetchData() {
-    try {
-      const response = await fetch('https://canape2020.stars.ne.jp//data');
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
+  try {
+    const response = await fetch('https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426', {
+      headers: {
+        'APP_ID': '1068500854479411779'
       }
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error(error);
-      return null;
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
     }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
   }
- //https://api.example.com/data の部分は、
+}
+
+
+// export async function fetchData() {
+//     try {
+//       const response = await fetch('https://canape2020.stars.ne.jp//data');
+//       if (!response.ok) {
+//         throw new Error('Failed to fetch data');
+//       }
+//       const data = await response.json();
+//       return data;
+//     } catch (error) {
+//       console.error(error);
+//       return null;
+//     }
+//   }
+//  //https://api.example.com/data の部分は、
  //実際のAPIエンドポイントのURLに置き換える必要があります 
 
 // // utils/fetchData.js
