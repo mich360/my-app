@@ -1,8 +1,6 @@
-// pages/page.tsx
-
 import React from 'react';
 import { MyComponent } from '../components/MyComponent';
-import { getServerSideProps } from './fetchDataPage';
+import { fetchData } from '../utils/fetchData';
 
 export default function Page({ data }) {
   // ...
@@ -16,22 +14,12 @@ export default function Page({ data }) {
   );
 }
 
-export { getServerSideProps };
+export async function getServerSideProps() {
+  const data = await fetchData();
 
-
-// // pages/page.tsx
-
-// import React from 'react';
-// import { MyComponent } from '../components/MyComponent';
-
-// export default function Page({ data }) {
-//   // ...
-
-//   return (
-//     <main>
-//       <h1>Page</h1>
-//       <MyComponent data={data} />
-//       {/* ... */}
-//     </main>
-//   );
-// }
+  return {
+    props: {
+      data,
+    },
+  };
+}
