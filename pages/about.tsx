@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { MyComponent } from '../components/MyComponent';
+import MyComponent from '../components/MyComponent';
 import { fetchData } from '../utils/fetchData';
 
 const AboutPage = () => {
