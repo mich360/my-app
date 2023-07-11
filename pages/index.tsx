@@ -2,7 +2,8 @@ import React from 'react';
 import { MyComponent } from '../components/MyComponent';
 import { fetchData } from '../utils/fetchData';
 
-export default function Home({ data }) {
+
+export default function Home({ data }: { data: any })　{
   // ...
 
   return (
