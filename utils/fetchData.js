@@ -1,28 +1,41 @@
 export async function fetchData() {
   try {
-    // データのフェッチを行う処理を追加
-    // 例: API リクエストを行い、データを取得する
-    // const response = await fetch('https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426', {
-    //   headers: {
-    //     'APP_ID': '1068500854479411779'
-    //   }
-    // });
-
-    // ダミーデータを返すように修正
     const dummyData = { example: 'dummy data' };
     return dummyData;
-    
-    // 実際のデータフェッチが完了した場合は以下のコードを使用します
-    // if (!response.ok) {
-    //   throw new Error('Failed to fetch data');
-    // }
-    // const data = await response.json();
-    // return data;
   } catch (error) {
     console.error(error);
     return null;
   }
 }
+
+
+
+
+// export async function fetchData() {
+//   try {
+//     // データのフェッチを行う処理を追加
+//     // 例: API リクエストを行い、データを取得する
+//     // const response = await fetch('https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426', {
+//     //   headers: {
+//     //     'APP_ID': '1068500854479411779'
+//     //   }
+//     // });
+
+//     // ダミーデータを返すように修正
+//     const dummyData = { example: 'dummy data' };
+//     return dummyData;
+    
+//     // 実際のデータフェッチが完了した場合は以下のコードを使用します
+//     // if (!response.ok) {
+//     //   throw new Error('Failed to fetch data');
+//     // }
+//     // const data = await response.json();
+//     // return data;
+//   } catch (error) {
+//     console.error(error);
+//     return null;
+//   }
+// }
 
 
 // // utils/fetchData.jsta
