@@ -11,10 +11,15 @@ export async function fetchData() {
       throw new Error('Failed to fetch data');
     }
 
-    const data = await response.json();
+    // JSONレスポンスのパース
+    const data = await response.json().catch((err) => {
+      console.error('Error parsing JSON:', err);
+      return null;
+    });
+
     return data;
   } catch (error) {
-    console.error(error);
+    console.error('Fetch error:', error);
     return null;
   }
 }
